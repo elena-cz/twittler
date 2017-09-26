@@ -1,0 +1,344 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+
+body {
+  font: 14px/20px 'Lato', sans-serif;
+  background-image: url('assets/watercolorbkg3.jpg');
+  background-repeat: repeat;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.container {
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  width: 900px;
+}
+
+.sidebar, 
+.main {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sidebar {
+
+  width: 30%;
+  float: left;
+  margin-right: 30px;
+}
+
+.main {
+  width: 60%;
+  float: right;
+}
+
+
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+
+/*
+  ========================================
+  Sidebar
+  ========================================
+*/
+
+/*
+  Logo
+*/
+
+.logo {
+  cursor: pointer;
+}
+
+/*
+  Profile
+*/
+
+.profile {
+  display: block;
+  height: 400px;
+  padding:20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.profile img {
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: 10px;
+}
+
+.profile h3, 
+.profile h4 {
+  color: white;
+  padding-bottom: 8px;
+}
+
+.profile h3 {
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  line-height: 40px;
+
+}
+.profile h4 {
+  font-size: 16px;
+}
+
+/*
+  ========================================
+  Main
+  ========================================
+*/
+
+
+/*
+  Write Tweet Form
+*/
+
+.writetweet {
+  display: block;
+  background:rgba(255,255,255, 0.9);
+  border: 5px solid white;
+  margin-bottom: 10px;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.writetweet textarea {
+  display: inline-block;
+  height: 50px;
+  width: 80%;
+  margin: 5px 30px 5px 5px;
+  background: none;
+  border: none;
+  resize: none;
+}
+
+.writetweet button {
+  display: inline-block;
+  color: #0C0236;
+  font: bold italic 16px/22px 'Lora', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: none;
+  border:none;
+  cursor: pointer;
+}
+
+.writetweet button:hover {
+  color: #008B8B;  
+}
+
+
+/* 
+  Show new tweets
+*/
+
+.showtweets {
+  display: block;
+  font:  italic 16px/22px 'Lora', serif;
+  color: #0C0236;
+  background:rgba(255,255,255, 0.95);
+  text-align: center;
+  padding: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.showtweets:hover {
+  color: #008B8B;  
+}
+
+
+
+/*
+  Tweets
+*/
+
+.feed {
+}
+
+.tweet {
+  background:rgba(255,255,255, 0.95);
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.tweet .profilepic {
+  display: block;
+  float: left;
+  width: 15%;
+  padding-right: 10px;
+}
+
+.tweet .profilepic img {
+  height: 60px;
+  border-radius: 50%;
+}
+
+.tweet .info, 
+.tweet .message {
+  display: block;
+  float: right;
+  width: 85%;
+}
+
+.tweet .info {
+  padding-bottom: 8px;
+
+}
+
+.tweet .name {
+  color: #0C0236;
+  font-weight: 700;
+  display: inline-block;
+
+}
+
+.tweet .username {
+  margin: 0 5px;
+}
+
+.tweet .username,
+.tweet .time {
+  display: inline-block;
+  color: #9e9e9e;
+}
+
+.tweet .username,
+.tweet .name {
+  cursor: pointer;
+}
+
+
+.tweet .username:hover,
+.tweet .name:hover {
+  text-decoration: underline;
+}
+
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+#gohome {
+  position: fixed;
+  bottom: 40px;
+  right: 60px;
+  background: none;
+  border: none;
+  color: white;
+  text-align: center;
+  font: italic 22px/24px 'Lora', serif;
+  cursor: pointer;
+}
+
+#gohome:hover {
+  color: #008B8B;  
+}
+
+#gohome small {
+  font-size: 14px;
+}
+
+
+/*
+  ========================================
+  Hide
+  ========================================
+*/
+
+.hide {
+  display: none;
+}
+
+

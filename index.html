@@ -3,25 +3,58 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,400i,700i" rel="stylesheet">
+    <script type="text/javascript" src="moment.js"></script>
+    <script type="text/javascript" src="moment-twitter.js"></script>
+
   </head>
   <body>
-    <script>
+    <div class="container group">
+      <div class="sidebar">
+        <div class="logo home">
+          <img src="assets/OwlPost_white_300.png">
+        </div>
+        <section class="profile">
+          <h3 class="name">Anonymous Owl</h3>
+          <h4 class="username">@anonymousowl</h4>
+          <div class="profilepic">
+            <img src="assets/profile_pics/owl.png"/>
+          </div>
+        </section>
+      </div>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+      <div class="main">
+        <form class="writetweet hide">
+          <textarea name="message" placeholder="What's afoot in the wizarding world?"></textarea>
+          <input type="hidden" name="username" value="anonymousowl">
+          <input type="hidden" name="name" value="Anonymous Owl">
+          <input type="hidden" name="profilepic" value="owl.png">
+          <button type="submit" name="post">Post</button>
+        </form>
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+        <div class="showtweets hide"></div>
 
-      });
-
-    </script>
+        <section class="feed">
+          <article class="tweet group">
+            <div class="profilepic">
+              <img src="assets/profile_pics/hermione.png"/>
+            </div>
+            <div class="info">
+              <span class="name">Hermione Granger</span>
+              <span class="username">@hermionegranger</span>
+              <span class="time"><script>moment().format("ddd, hA")</script></span>
+            </div>
+            <div class="message">
+              <p>a group of muggles finished this squashy armchairs #dorcus</p>
+            </div>
+          </article>
+        </section>
+    </div>
+    </div>
+    <footer>
+      <button class="home" id="gohome"><small>Accio</small><br />home</button>
+    </footer>
+    <script src="application.js"></script>
   </body>
 </html>
